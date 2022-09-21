@@ -1,4 +1,4 @@
-const filterArray = require("./filterArray");
+const filterArray = require("../src/filterArray");
 
 describe("filterArray", () => {
   it("will return null if null is passed", () => {

@@ -1,4 +1,4 @@
-const getUserById = require("./getUserById");
+const getUserById = require("../src/getUserById");
 
 describe("getUserById", () => {
   it("will return the user if the id is found", async () => {

@@ -1,4 +1,4 @@
-const isUtensilAvailable = require("./isUtensilAvailable");
+const isUtensilAvailable = require("../src/isUtensilAvailable");
 
 describe("isUtensilAvailable", () => {
   it("will return true if the utensil is found", async () => {

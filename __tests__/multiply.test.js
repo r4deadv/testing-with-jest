@@ -1,4 +1,4 @@
-const multiply = require("./multiply");
+const multiply = require("../src/multiply");
 
 describe("multiply", () => {
   it("will return the product of both numbers passed", () => {
