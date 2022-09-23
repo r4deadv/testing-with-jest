@@ -1,10 +1,18 @@
 import { render, screen } from "@testing-library/react";
+import * as React from "react";
 import App from "./App";
 
-test("renders learn react link", () => {
-  render(<App />);
-  screen.debug();
+test("will have all expected fields", () => {
+  const component = render(<App />);
 
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+  const labels = component.getAllByText(/name/);
+  expect(labels.length).toEqual(2);
+
+  const firstNmaeInput = component.getByTestId("first-name-input");
+  const lastNmaeInput = component.getByTestId("last-name-input");
+  expect(firstNmaeInput).toBeInTheDocument();
+  expect(lastNmaeInput).toBeInTheDocument();
+
+  const submitButton = component.getByText("Submit");
+  expect(submitButton).toBeInTheDocument();
 });
